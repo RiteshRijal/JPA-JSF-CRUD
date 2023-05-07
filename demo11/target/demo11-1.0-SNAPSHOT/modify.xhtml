@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Edit</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h:panelGrid columns="2">
+       <h:form>
+        <h:outputLabel for="id" value="Enter ID: "/>
+        <h:inputText id="id" value="#{task.id}"/>
+        
+        <h:outputLabel for="name" value="Name: "/>
+        <h:inputText id="name" value="#{task.name}"/>
+        
+        <h:outputLabel for="address" value="Address: "/>
+        <h:inputText id="address" value="#{task.address}"/>
+        
+        <h:commandButton value="Update" action="#{task.modifyDatabase()}"/>
+        <h:column><h:commandButton value="back" action="index" /></h:column>
+    </h:form>
+        </h:panelGrid>
+        
+    </body>
+</html>
